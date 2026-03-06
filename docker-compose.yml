@@ -1,0 +1,9 @@
+services:
+  api:
+    build: .
+    container_name: api-sapme
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    restart: unless-stopped
